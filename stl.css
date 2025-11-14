@@ -1,0 +1,1237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #A01025;
+    --primary-light: #C41E3A;
+    --text-dark: #333333;
+    --text-gray: #666666;
+    --border-color: #E0E0E0;
+    --bg-light: #FFFFFF;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER SECTION ===== */
+.one {
+    /* Переделан в герой-секцию с фоновым изображением и наложенным текстом */
+    position: relative;
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                url('Фото/Главная.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.logo {
+    /* Позиционирована абсолютно в левом верхнем углу */
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 60px;
+    height: auto;
+    z-index: 10;
+}
+
+.tel {
+    /* Позиционирована абсолютно в правом верхнем углу */
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+    z-index: 10;
+    padding: 0;
+}
+
+.tel p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.cover {
+    /* Скрыто, так как используется как фоновое изображение */
+    display: none;
+}
+
+.one h1 {
+    /* Стилизация заголовка для герой-секции */
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+}
+
+.one p {
+    /* Стилизация подзаголовка */
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--white);
+    margin-bottom: 40px;
+    text-align: center;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+}
+
+.one button {
+    /* Кнопка белая с черным текстом */
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--text-dark);
+    border: none;
+    padding: 14px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.one button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* ===== WHY SECTION ===== */
+.why-section {
+    padding: 80px 0px;
+    background-color: #f5f5f5;
+}
+
+.why-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.why-header h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.why-header h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    margin: 10px 0 0 0;
+}
+
+.why-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.why-border-box {
+    border: 5px solid #8B2F2F;
+    background-color: #fff;
+    padding: 30px 40px 30px 250px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.why-image {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.why-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.why-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.benefit-item .checkmark-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+}
+
+.benefit-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 5px 0;
+}
+
+.benefit-item p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.why-button {
+    align-self: center;
+    margin-top: 30px;
+    padding: 12px 40px;
+    background-color: transparent;
+    color: #8B2F2F;
+    border: 2px solid #8B2F2F;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.why-button:hover {
+    background-color: #8B2F2F;
+    color: #fff;
+}
+
+
+/* ===== PRODUCTION SECTION ===== */
+.production-section {
+    padding: 80px 0;
+    background-color: #D9D9D9;
+}
+
+.production-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.production-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-gray);
+    margin-bottom: 80px;
+}
+
+/* переделана вся структура для правильного чередования изображений слева-справа */
+.production-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.production-item--reverse {
+    flex-direction: row-reverse;
+}
+
+.production-img {
+    width: 45%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* изменяю .production-text на вертикальную ориентацию, чтобы иконка была наверху текста */
+/* CENTER PRODUCTION ICONS HORIZONTALLY */
+.production-text {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.production-number {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.production-text p {
+    font-size: 16px;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 0;
+}
+
+/* ===== PRODUCTS SECTION ===== */
+/* ===== FOOTER SECTION ===== */
+.footer-section {
+    background-color: var(--bg-light);
+    padding: 60px 40px;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-left {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Phone number styling in footer - now positioned above logo */
+.footer-left h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0 0 20px 0;
+    order: -1; /* This moves phone number above the logo */
+}
+
+/* Logo styling - positioned at center after phone number */
+.footer-left img:first-child {
+    width: 80px;
+    height: auto;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-socials img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer right section with map and address */
+.footer-right {
+    flex: 1;
+    text-align: left;
+    /* Added relative positioning to contain absolute address */
+    position: relative;
+}
+
+.footer-right img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    /* Removed margin-bottom since address will overlay */
+    margin-bottom: 0;
+}
+
+/* Making address text bolder and centered on map */
+.footer-right p {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    letter-spacing: 0.5px;
+    /* Positioned address absolutely in center of map */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    max-width: 90%;
+}
+
+/* Completely redesigned why section to match reference with overlapping image */
+/* ===== WHY SECTION - Exact Match to Reference ===== */
+.why-section {
+    /* уменьшил боковые отступы с 20px до 0px для максимального расширения серого блока */
+    padding: 80px 0px;
+    background-color: #f5f5f5;
+}
+
+.why-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.why-header h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.why-header h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    margin: 10px 0 0 0;
+}
+
+.why-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Reduced border thickness, padding, and overall size */
+.why-border-box {
+    border: 5px solid #8B2F2F;
+    background-color: #fff;
+    padding: 35px 40px 35px 240px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.why-image {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.why-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Reduced gap between benefit items */
+.why-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.benefit-item .checkmark-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+}
+
+.benefit-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 5px 0;
+}
+
+.benefit-item p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.why-button {
+    align-self: center;
+    margin-top: 30px;
+    padding: 12px 40px;
+    background-color: transparent;
+    color: #8B2F2F;
+    border: 2px solid #8B2F2F;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.why-button:hover {
+    background-color: #8B2F2F;
+    color: #fff;
+}
+
+/* ===== PRODUCTS SECTION - Exact Match to Mockup ===== */
+products-section {
+    padding: 80px 40px;
+    background-color: var(--white);
+    margin: 0;
+}
+
+.products-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: left;
+    color: var(--text-dark);
+}
+
+/* Changed to 2-column grid matching mockup exactly */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+}
+
+.product-card {
+    background-color: var(--white);
+    overflow: hidden;
+    text-align: left;
+    padding: 0;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    /* увеличил высоту изображений с 320px до 450px */
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--text-dark);
+}
+
+.product-card p {
+    font-size: 14px;
+    color: var(--text-gray);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+/* First button - black background, full width */
+.product-card button:first-of-type {
+    background-color: #333333;
+    color: var(--white);
+    border: none;
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 0 8px 0;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    display: block;
+}
+
+.product-card button:first-of-type:hover {
+    background-color: var(--primary-color);
+}
+
+/* Second button - gray underlined link "подробнее" */
+.product-card .link-button {
+    background-color: transparent;
+    color: var(--text-gray);
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: underline;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+}
+.product-card .link-button:hover {
+    color: var(--text-dark);
+}
+
+
+
+/* ===== HOW SECTION ===== */
+.how-section {
+    padding: 80px 40px;
+    background-color: var(--bg-light);
+}
+
+.how-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.how-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-gray);
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+/* Переделана сетка для V-образной схемы с правильным расположением иконок */
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Пунктирная линия от верхней левой иконки к центральной (диагональ вниз-вправо) */
+.how-grid::before {
+    content: '';
+    position: absolute;
+    top: 110px;
+    left: 12%;
+    width: 28%;
+    height: 180px;
+    border-left: 2px dashed var(--primary-color);
+    border-bottom: 2px dashed var(--primary-color);
+    z-index: 0;
+}
+
+/* Пунктирная линия от верхней правой иконки к центральной (диагональ вниз-влево) */
+.how-grid::after {
+    content: '';
+    position: absolute;
+    top: 110px;
+    right: 12%;
+    width: 28%;
+    height: 180px;
+    border-right: 2px dashed var(--primary-color);
+    border-bottom: 2px dashed var(--primary-color);
+    z-index: 0;
+}
+
+.how-item {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Позиционирование иконок для V-образной схемы */
+/* Верхняя левая иконка (телефон) */
+.how-item--1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Верхняя правая иконка (галочка) */
+.how-item--2 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+/* Центральная иконка внизу (менеджер) */
+.how-item--3 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* Иконка справа внизу (коробка) */
+.how-item--4 {
+    grid-column: 3 / 5;
+    grid-row: 2;
+    margin-top: 80px;
+}
+
+/* Белые кружки с пунктирной красной границей */
+.how-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 50%;
+    border: 2px dashed var(--primary-color);
+    flex-shrink: 0;
+}
+
+.how-item p {
+    font-size: 14px;
+    color: var(--text-gray);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Красный текст для важных элементов */
+.how-item p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ===== FAQ SECTION ===== */
+.faq-section {
+    padding: 80px 40px;
+    background-color: var(--bg-light);
+    border-radius: 20px;
+    margin: 80px 0;
+}
+
+.faq-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--text-dark);
+}
+
+.faq-item {
+    background-color: var(--white);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.faq-item:hover {
+    border-left-color: var(--primary-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.faq-item p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.faq-item img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* ===== STATS SECTION ===== */
+.stats-section {
+    padding: 80px 0;
+    background-color: #D9D9D9;
+}
+
+.stats-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-item h3 {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1;
+}
+
+.stat-item p {
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 200px;
+}
+
+/* ===== FOOTER SECTION ===== */
+.footer-section {
+    background-color: var(--bg-light);
+    padding: 60px 40px;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-left {
+    flex: 0 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+
+/* Logo styling - positioned at top of left section */
+.footer-left img:first-child {
+    width: 80px;
+    height: auto;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* Phone number styling in footer */
+.footer-left h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0 0 20px 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-socials img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Footer right section with map and address -->
+.footer-right {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-right img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.footer-right p {
+    font-size: 18px;
+		font-weight: 900
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .one {
+        padding: 20px 15px;
+    }
+    
+    .logo {
+        width: 60px;
+    }
+    
+    .tel p {
+        font-size: 16px;
+    }
+    
+    .one h1 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .one p {
+        font-size: 14px;
+    }
+    
+    .one button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    /* Why section mobile */
+    .why-section {
+        padding: 40px 10px;
+    }
+    
+    .why-header h2 {
+        font-size: 22px;
+        padding: 0 10px;
+    }
+    
+    .why-header h3 {
+        font-size: 18px;
+    }
+    
+    .why-container {
+        padding: 0 10px;
+    }
+    
+    .why-border-box {
+        padding: 100px 20px 20px 20px;
+        border: 3px solid #8B2F2F;
+    }
+    
+    .why-image {
+        width: 150px;
+        left: 50%;
+        top: 15px;
+    }
+    
+    .benefit-item {
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .benefit-item .checkmark-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .benefit-item h4 {
+        font-size: 16px;
+    }
+    
+    .benefit-item p {
+        font-size: 13px;
+    }
+    
+    .why-button {
+        padding: 10px 30px;
+        font-size: 14px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    /* Products section mobile */
+    .products-section {
+        padding: 40px 15px;
+    }
+    
+    .products-section h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .product-card img {
+        height: 350px;
+    }
+    
+    .product-card h3 {
+        font-size: 18px;
+    }
+    
+    .product-card p {
+        font-size: 14px;
+    }
+    
+    /* Footer mobile */
+    .footer-section {
+        padding: 30px 15px;
+        text-align: center;
+    }
+    
+    .footer-left {
+        align-items: center;
+        width: 100%;
+    }
+    
+    .footer-left h4 {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .footer-left img:first-child {
+        width: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-socials {
+        justify-content: center;
+    }
+    
+    .footer-socials img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .footer-right {
+        width: 100%;
+    }
+    
+    .footer-right img {
+        max-width: 100%;
+    }
+    
+    .footer-right p {
+        font-size: 13px;
+        padding: 10px 15px;
+        max-width: 85%;
+    }
+}
+
+/* Small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .one h1 {
+        font-size: 20px;
+    }
+    
+    .one p {
+        font-size: 13px;
+    }
+    
+    .why-header h2 {
+        font-size: 18px;
+    }
+    
+    .why-header h3 {
+        font-size: 16px;
+    }
+    
+    .why-image {
+        width: 120px;
+    }
+    
+    .benefit-item h4 {
+        font-size: 14px;
+    }
+    
+    .benefit-item p {
+        font-size: 12px;
+    }
+    
+    .products-section h2 {
+        font-size: 18px;
+    }
+    
+    .product-card img {
+        height: 280px;
+    }
+    
+    .footer-right p {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .why-section {
+        flex-direction: column;
+    }
+
+    .why-section > img {
+        width: 100%;
+    }
+
+    .why-section > div:not(.benefit-item) {
+        width: 100%;
+    }
+
+    .production-item {
+        flex-direction: column !important;
+    }
+
+    .production-item img {
+        width: 100%;
+    }
+
+    .production-item > div {
+        width: 100%;
+    }
+
+    .how-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .how-grid::before {
+        display: none;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+    .footer-right img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .one h1 {
+        font-size: 28px;
+    }
+
+    .why-section,
+    .products-section,
+    .faq-section {
+        padding: 40px 20px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .production-section {
+        padding: 60px 0;
+    }
+
+    .production-item img {
+        height: 220px;
+    }
+
+    .stat-item h3 {
+        font-size: 40px;
+    }
+
+    .how-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .one h1 {
+        font-size: 22px;
+    }
+
+    .one p,
+    .production-section h2,
+    .stats-section h2 {
+        font-size: 14px;
+    }
+
+    .why-section,
+    .products-section,
+    .faq-section {
+        padding: 25px 15px;
+    }
+
+    .product-card button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .benefit-item {
+        margin-bottom: 15px;
+    }
+
+    .stat-item h3 {
+        font-size: 32px;
+    }
+
+    .footer-section {
+        padding: 40px 15px;
+        gap: 30px;
+    }
+}
